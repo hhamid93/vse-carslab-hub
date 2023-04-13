@@ -14,7 +14,7 @@ spec:
     namespace: policies-sub
   project: policy-app-project
   source:
-    path: clusters/overlays/ztp-sites/*
+    path: clusters/ztp-siteconfig/*
     repoURL: https://github.com/hhamid93/vse-carslab-hub.git
     targetRevision: main
   syncPolicy:
