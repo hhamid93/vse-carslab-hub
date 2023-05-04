@@ -14,108 +14,107 @@ spec:
   clusterImageSetNameRef: "img4.12.10-x86-64-appsub"
   sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDmxZqjFlSoB5gyVvpECdqpfaDTnwA7wEvlFrWJVsY58eSYmJ9sG8vhEIKWx5gG0li964KY/Ced+gaXYOslkQMQ5RkdPE3brp5hCTgqK+tv3l7nA1c6g6em09JdU7eoKh7/8bOLqQJ+2hUEeNrciTLUf0K2sWDG6I+WyV+w2HNMg+QlhYnRCT+HZWJEA2K8nczJMgd6rz5PhBYxkMF8tHKQDcC44O72UtOjoBy2d7qqYYvvo8xUFt3KiKIsJHK8F8UL1BeYlLaeudRDZAZ2Ka7Ue0Pg/VrR2vRGUSNaG344QhffKHA9d+iZ8N3BUQltP0tqSTGRSZGXiAUwofn8dwgneOkA+b86MSXLJWFxLnyo6oHzykEWOuC8Ik0f4vHdlBeIXZQtRwt4DEV76IJJH6MmVU7xnWgfGAg1ircKH+wWtCVGTJQPiNbcD5wH5cTVfIahKF/wcbirnrgvsaGDYrQMjJJSoW0yEmAEMjdD4wMEK4/M3wxXllHYchsD/oTSrSc="
   clusters:
-    - clusterName: "ran1"
-      clusterLabels:
-       #group-vdu: ""
-       #common-49: true
-       #sites: "r740xls"
-      networkType: "OVNKubernetes"
-      
-      clusterNetwork:
-        - cidr: 10.128.0.0/14
-          hostPrefix: 23
-      serviceNetwork:
-        - 172.30.0.0/16
-      machineNetwork:
-        - cidr: 192.168.40.0/25
-      additionalNTPSources:
-        - 192.168.40.10
-      nodes:
-        - hostName: "master01.ran1.samsung.bos2.lab"
-          role: master
-          bmcAddress: "redfish-virtualmedia://192.168.40.161/redfish/v1/Systems/1"
-          bmcCredentialsName:
-            name: "ran1-bmc-creds-secret"
-          bootMACAddress: "B4:7A:F1:C4:01:42"
-          bootMode: "UEFI"
-          cpuset: "0-7"
-          nodeNetwork:
+  - clusterName: "ran1"
+    clusterLabels:
+     #group-vdu: ""
+     #common-49: true
+     #sites: "r740xls"
+    networkType: "OVNKubernetes"  
+    clusterNetwork:
+      - cidr: 10.128.0.0/14
+        hostPrefix: 23
+    serviceNetwork:
+      - 172.30.0.0/16
+    machineNetwork:
+      - cidr: 192.168.40.0/25
+    additionalNTPSources:
+      - 192.168.40.10
+    nodes:
+      - hostName: "master01.ran1.samsung.bos2.lab"
+        role: master
+        bmcAddress: "redfish-virtualmedia://192.168.40.161/redfish/v1/Systems/1"
+        bmcCredentialsName:
+          name: "ran1-bmc-creds-secret"
+        bootMACAddress: "B4:7A:F1:C4:01:42"
+        bootMode: "UEFI"
+        cpuset: "0-7"
+        nodeNetwork:
+          interfaces:
+            - name: "ens1f1"
+              macAddress: "B4:96:91:B3:67:84"
+          config:
             interfaces:
-              - name: "ens1f1"
-                macAddress: "B4:96:91:B3:67:84"
-            config:
-              interfaces:
-                - name: ens1f1
-                  type: ethernet
-                  state: up
-                  ipv4:
-                    enabled: true
-                    address:
-                      - ip: 192.168.40.91
-                        prefix-length: 25
-              dns_server_ips:
-                    - 192.168.254.20
-              routes:
-                config:
-                  - destination: 0.0.0.0/0
-                    next-hop-address: 192.168.40.1
-                    next-hop-interface: ens1f1
-        - hostName: "master02.ran1.samsung.bos2.lab"
-          role: master
-          bmcAddress: "redfish-virtualmedia://192.168.40.162/redfish/v1/Systems/1"
-          bmcCredentialsName:
-            name: "ran1-bmc-creds-secret"
-          bootMACAddress: "B4:7A:F1:C4:11:D0"
-          bootMode: "UEFI"
-          cpuset: "0-7"
-          nodeNetwork:
+              - name: ens1f1
+                type: ethernet
+                state: up
+                ipv4:
+                  enabled: true
+                  address:
+                    - ip: 192.168.40.91
+                      prefix-length: 25
+            dns_server_ips:
+                  - 192.168.254.20
+            routes:
+              config:
+                - destination: 0.0.0.0/0
+                  next-hop-address: 192.168.40.1
+                  next-hop-interface: ens1f1
+      - hostName: "master02.ran1.samsung.bos2.lab"
+        role: master
+        bmcAddress: "redfish-virtualmedia://192.168.40.162/redfish/v1/Systems/1"
+        bmcCredentialsName:
+          name: "ran1-bmc-creds-secret"
+        bootMACAddress: "B4:7A:F1:C4:11:D0"
+        bootMode: "UEFI"
+        cpuset: "0-7"
+        nodeNetwork:
+          interfaces:
+            - name: "ens1f1"
+              macAddress: "B4:96:91:B3:69:08"
+          config:
             interfaces:
-              - name: "ens1f1"
-                macAddress: "B4:96:91:B3:69:08"
-            config:
-              interfaces:
-                - name: enp1f1
-                  type: ethernet
-                  state: up
-                  ipv4:
-                    enabled: true
-                    address:
-                      - ip: 192.168.40.92
-                        prefix-length: 25
-              dns_server_ips:
-                    - 192.168.254.20
-              routes:
-                config:
-                  - destination: 0.0.0.0/0
-                    next-hop-address: 192.168.40.1
-                    next-hop-interface: ens1f1
-        - hostName: "master03.ran1.samsung.bos2.lab"
-          role: master
-          bmcAddress: "redfish-virtualmedia://192.168.40.163/redfish/v1/Systems/1"
-          bmcCredentialsName:
-            name: "ran1-bmc-creds-secret"
-          bootMACAddress: "B4:7A:F1:C4:11:3A"
-          bootMode: "UEFI"
-          cpuset: "0-7"
-          nodeNetwork:
+              - name: enp1f1
+                type: ethernet
+                state: up
+                ipv4:
+                  enabled: true
+                  address:
+                    - ip: 192.168.40.92
+                      prefix-length: 25
+            dns_server_ips:
+                  - 192.168.254.20
+            routes:
+              config:
+                - destination: 0.0.0.0/0
+                  next-hop-address: 192.168.40.1
+                  next-hop-interface: ens1f1
+      - hostName: "master03.ran1.samsung.bos2.lab"
+        role: master
+        bmcAddress: "redfish-virtualmedia://192.168.40.163/redfish/v1/Systems/1"
+        bmcCredentialsName:
+          name: "ran1-bmc-creds-secret"
+        bootMACAddress: "B4:7A:F1:C4:11:3A"
+        bootMode: "UEFI"
+        cpuset: "0-7"
+        nodeNetwork:
+          interfaces:
+            - name: "ens1f1"
+              macAddress: "B4:96:91:B3:67:8C"
+          config:
             interfaces:
-              - name: "ens1f1"
-                macAddress: "B4:96:91:B3:67:8C"
-            config:
-              interfaces:
-                - name: ens1f1
-                  type: ethernet
-                  state: up
-                  ipv4:
-                    enabled: true
-                    address:
-                      - ip: 192.168.40.93
-                        prefix-length: 25
-              dns_server_ips:
-                    - 192.168.254.20
-              routes:
-                config:
-                  - destination: 0.0.0.0/0
-                    next-hop-address: 192.168.40.1
-                    next-hop-interface: ens1f1
+              - name: ens1f1
+                type: ethernet
+                state: up
+                ipv4:
+                  enabled: true
+                  address:
+                    - ip: 192.168.40.93
+                      prefix-length: 25
+            dns_server_ips:
+                  - 192.168.254.20
+            routes:
+              config:
+                - destination: 0.0.0.0/0
+                  next-hop-address: 192.168.40.1
+                  next-hop-interface: ens1f1
 ---
