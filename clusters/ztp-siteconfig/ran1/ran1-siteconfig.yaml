@@ -33,7 +33,7 @@ spec:
       nodes:
         - hostName: "master01.ran1.samsung.bos2.lab"
           role: master
-          bmcAddress: "ilo-virtualmedia://192.168.40.161/redfish/v1/Systems/System.Embedded.1"
+          bmcAddress: "redfish-virtualmedia://192.168.40.161/redfish/v1/Systems/System.Embedded.1"
           bmcCredentialsName:
             name: "ran1-bmc-creds-secret"
           bootMACAddress: "B4:7A:F1:C4:01:42"
@@ -62,7 +62,7 @@ spec:
                     next-hop-interface: ens1f1
         - hostName: "master02.ran1.samsung.bos2.lab"
           role: master
-          bmcAddress: "ilo-virtualmedia://192.168.40.162/redfish/v1/Systems/System.Embedded.1"
+          bmcAddress: "redfish-virtualmedia://192.168.40.162/redfish/v1/Systems/System.Embedded.1"
           bmcCredentialsName:
             name: "ran1-bmc-creds-secret"
           bootMACAddress: "B4:7A:F1:C4:11:D0"
@@ -91,7 +91,7 @@ spec:
                     next-hop-interface: ens1f1
         - hostName: "master03.ran1.samsung.bos2.lab"
           role: master
-          bmcAddress: "ilo-virtualmedia://192.168.40.163/redfish/v1/Systems/System.Embedded.1"
+          bmcAddress: "redfish-virtualmedia://192.168.40.163/redfish/v1/Systems/System.Embedded.1"
           bmcCredentialsName:
             name: "ran1-bmc-creds-secret"
           bootMACAddress: "B4:7A:F1:C4:11:3A"
