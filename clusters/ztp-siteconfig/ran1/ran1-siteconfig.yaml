@@ -5,8 +5,6 @@ metadata:
   name: "ran1"
   namespace: "ran1"
 spec:
-  api_vip: 192.168.40.89
-  ingress_vip: 192.168.40.90
   baseDomain: "samsung.bos2.lab"
   pullSecretRef:
     name: "assisted-deployment-pull-secret"
