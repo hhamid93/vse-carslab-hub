@@ -19,7 +19,9 @@ spec:
      #group-vdu: ""
      #common-49: true
      #sites: "r740xls"
-    networkType: "OVNKubernetes"  
+    networkType: "OVNKubernetes"
+    machineNetwork:
+      - cidr: 192.168.40.0/25
     clusterNetwork:
       - cidr: 10.128.0.0/14
         hostPrefix: 23
