@@ -38,11 +38,12 @@ spec:
         cpuset: "0-7"
         nodeNetwork:
           interfaces:
-            - name: "ens1f1"
+            - name: "ens1f0"
               macAddress: "B4:96:91:B3:67:84"
+            -
           config:
             interfaces:
-              - name: ens1f1
+              - name: ens1f0
                 type: ethernet
                 state: up
                 ipv4:
@@ -56,7 +57,7 @@ spec:
               config:
                 - destination: 0.0.0.0/0
                   next-hop-address: 192.168.40.1
-                  next-hop-interface: ens1f1
+                  next-hop-interface: ens1f0
       - hostName: "master02.ran1.samsung.bos2.lab"
         role: master
         bmcAddress: "redfish-virtualmedia://192.168.40.162/redfish/v1/Systems/1"
@@ -67,11 +68,11 @@ spec:
         cpuset: "0-7"
         nodeNetwork:
           interfaces:
-            - name: "ens1f1"
+            - name: "ens1f0"
               macAddress: "B4:96:91:B3:69:08"
           config:
             interfaces:
-              - name: enp1f1
+              - name: enp1f0
                 type: ethernet
                 state: up
                 ipv4:
@@ -85,7 +86,7 @@ spec:
               config:
                 - destination: 0.0.0.0/0
                   next-hop-address: 192.168.40.1
-                  next-hop-interface: ens1f1
+                  next-hop-interface: ens1f0
       - hostName: "master03.ran1.samsung.bos2.lab"
         role: master
         bmcAddress: "redfish-virtualmedia://192.168.40.163/redfish/v1/Systems/1"
@@ -96,11 +97,11 @@ spec:
         cpuset: "0-7"
         nodeNetwork:
           interfaces:
-            - name: "ens1f1"
+            - name: "ens1f0"
               macAddress: "B4:96:91:B3:67:8C"
           config:
             interfaces:
-              - name: ens1f1
+              - name: ens1f0
                 type: ethernet
                 state: up
                 ipv4:
@@ -114,5 +115,5 @@ spec:
               config:
                 - destination: 0.0.0.0/0
                   next-hop-address: 192.168.40.1
-                  next-hop-interface: ens1f1
+                  next-hop-interface: ens1f0
 ---
