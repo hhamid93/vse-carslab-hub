@@ -40,6 +40,12 @@ spec:
           interfaces:
             - name: "ens1f0"
               macAddress: "B4:96:91:B3:67:84"
+            - name: "ens1f1"
+              macAddress: "B4:96:91:B3:67:85"
+            - name: "ens1f2"
+              macAddress: "B4:96:91:B3:67:86"
+            - name: "ens1f3"
+              macAddress: "B4:96:91:B3:67:87"
           config:
             interfaces:
               - name: ens1f0
@@ -50,6 +56,15 @@ spec:
                   address:
                     - ip: 192.168.40.91
                       prefix-length: 25
+              - name: ens1f1
+                type: ethernet
+                state: down
+              - name: ens1f2
+                type: ethernet
+                state: down
+              - name: ens1f3
+                type: ethernet
+                state: down
             dns-resolver:
               config:
                 server:
@@ -71,9 +86,15 @@ spec:
           interfaces:
             - name: "ens1f0"
               macAddress: "B4:96:91:B3:69:08"
+            - name: "ens1f1"
+              macAddress: "B4:96:91:B3:69:09"
+            - name: "ens1f2"
+              macAddress: "B4:96:91:B3:69:0a"
+            - name: "ens1f3"
+              macAddress: "B4:96:91:B3:69:0b"     
           config:
             interfaces:
-              - name: enp1f0
+              - name: ens1f0
                 type: ethernet
                 state: up
                 ipv4:
@@ -81,6 +102,15 @@ spec:
                   address:
                     - ip: 192.168.40.92
                       prefix-length: 25
+              - name: ens1f1
+                type: ethernet
+                state: down
+              - name: ens1f2
+                type: ethernet
+                state: down
+              - name: ens1f3
+                type: ethernet
+                state: down
             dns-resolver:
               config:
                 server:
@@ -102,6 +132,12 @@ spec:
           interfaces:
             - name: "ens1f0"
               macAddress: "B4:96:91:B3:67:8C"
+            - name: "ens1f1"
+              macAddress: "B4:96:91:B3:67:8D"
+            - name: "ens1f2"
+              macAddress: "B4:96:91:B3:67:8E"
+            - name: "ens1f3"
+              macAddress: "B4:96:91:B3:67:8F"
           config:
             interfaces:
               - name: ens1f0
@@ -112,6 +148,15 @@ spec:
                   address:
                     - ip: 192.168.40.93
                       prefix-length: 25
+              - name: ens1f1
+                type: ethernet
+                state: down
+              - name: ens1f2
+                type: ethernet
+                state: down
+              - name: ens1f3
+                type: ethernet
+                state: down
             dns-resolver:
               config:
                 server:
