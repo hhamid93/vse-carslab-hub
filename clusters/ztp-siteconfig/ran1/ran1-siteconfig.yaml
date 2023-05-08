@@ -40,7 +40,6 @@ spec:
           interfaces:
             - name: "ens1f0"
               macAddress: "B4:96:91:B3:67:84"
-            -
           config:
             interfaces:
               - name: ens1f0
@@ -51,7 +50,9 @@ spec:
                   address:
                     - ip: 192.168.40.91
                       prefix-length: 25
-            dns_server_ips:
+            dns-resolver:
+              config:
+                server:
                   - 192.168.254.20
             routes:
               config:
@@ -80,7 +81,9 @@ spec:
                   address:
                     - ip: 192.168.40.92
                       prefix-length: 25
-            dns_server_ips:
+            dns-resolver:
+              config:
+                server:
                   - 192.168.254.20
             routes:
               config:
@@ -109,7 +112,9 @@ spec:
                   address:
                     - ip: 192.168.40.93
                       prefix-length: 25
-            dns_server_ips:
+            dns-resolver:
+              config:
+                server:
                   - 192.168.254.20
             routes:
               config:
