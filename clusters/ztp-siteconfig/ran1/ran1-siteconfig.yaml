@@ -160,7 +160,7 @@ spec:
             dns-resolver:
               config:
                 server:
-                  - 192.168.254.20
+                  - 192.168.254.21
             routes:
               config:
                 - destination: 0.0.0.0/0
