@@ -140,7 +140,7 @@ spec:
               macAddress: "B4:96:91:B3:67:8F"
           config:
             interfaces:
-              - name: ens1f0
+              - name: ens1f1
                 type: ethernet
                 state: up
                 ipv4:
@@ -148,7 +148,7 @@ spec:
                   address:
                     - ip: 192.168.40.93
                       prefix-length: 25
-              - name: ens1f1
+              - name: ens1f0
                 type: ethernet
                 state: down
               - name: ens1f2
@@ -160,7 +160,7 @@ spec:
             dns-resolver:
               config:
                 server:
-                  - 192.168.254.21
+                  - 192.168.254.20
             routes:
               config:
                 - destination: 0.0.0.0/0
