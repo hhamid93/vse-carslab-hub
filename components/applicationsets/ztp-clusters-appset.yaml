@@ -12,8 +12,8 @@ metadata:
 spec:
   generators:
     - git:
-        repoURL: https://github.com/redhat-partner-solutions/vse-carslab-hub.git
-        revision: main
+        repoURL: https://github.com/hhamid93/vse-carslab-hub.git
+        revision: ztp-policies
         directories:
           - path: clusters/ztp-siteconfig/*
   template:
@@ -35,8 +35,8 @@ spec:
           - CreateNamespace=true
       source:
         path: '{{path}}'
-        repoURL: https://github.com/redhat-partner-solutions/vse-carslab-hub.git
-        targetRevision: main
+        repoURL: https://github.com/hhamid93/vse-carslab-hub.git
+        targetRevision: ztp-policies
       destination:
         server: https://kubernetes.default.svc
         namespace: clusters-sub
