@@ -5,7 +5,6 @@ kind: Kustomization
 generators:
  - ran1-siteconfig.yaml
 
-
 resources:
  - github.com/redhat-partner-solutions/vse-ocp-bases/base/ztp/site-config?ref=main
 
