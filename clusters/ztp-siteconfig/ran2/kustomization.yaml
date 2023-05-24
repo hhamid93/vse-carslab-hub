@@ -1,0 +1,47 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+generators:
+ - skidoo-siteconfig.yaml
+
+resources:
+ - github.com/redhat-partner-solutions/vse-ocp-bases/base/ztp/site-config?ref=main
+
+patches:
+ - target:
+    kind: Secret
+   patch: |-
+     - op: replace
+       path: /metadata/name
+       value: 'ran2-bmc-creds-secret'
+     - op: replace
+       path: /metadata/namespace
+       value: 'ran2'
+     - op: replace
+       path: /data/username
+       value: 'aGhhbWlkCg=='
+     - op: replace
+       path: /data/password
+       value: 'Nzg2LUhhbXphCg=='
+ - target:
+    kind: SealedSecret
+   patch: |-
+     - op: replace
+       path: /metadata/name
+       value: 'assisted-deployment-pull-secret'
+     - op: replace
+       path: /metadata/namespace
+       value: 'ran2'
+     - op: replace
+       path: /spec/encryptedData/.dockerconfigjson
+       value: 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
+     - op: replace
+       path: /spec/encryptedData/type
+     - op: replace
+       path: /spec/template/metadata/name
+       value: 'ran2-bmc-creds-secret'
+     - op: replace
+       path: /spec/template/metadata/namespace
+       value: 'ran2'
+---
