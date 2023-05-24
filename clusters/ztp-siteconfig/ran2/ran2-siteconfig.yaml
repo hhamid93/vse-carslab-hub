@@ -1,0 +1,120 @@
+apiVersion: ran.openshift.io/v1
+kind: SiteConfig
+metadata:
+  name: "ran2"
+  namespace: "ran2"
+spec:
+  baseDomain: "samsung.bos2.lab"
+  pullSecretRef:
+    name: "assisted-deployment-pull-secret"
+  clusterImageSetNameRef: "img4.12.10-x86-64-appsub"
+  sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDmxZqjFlSoB5gyVvpECdqpfaDTnwA7wEvlFrWJVsY58eSYmJ9sG8vhEIKWx5gG0li964KY/Ced+gaXYOslkQMQ5RkdPE3brp5hCTgqK+tv3l7nA1c6g6em09JdU7eoKh7/8bOLqQJ+2hUEeNrciTLUf0K2sWDG6I+WyV+w2HNMg+QlhYnRCT+HZWJEA2K8nczJMgd6rz5PhBYxkMF8tHKQDcC44O72UtOjoBy2d7qqYYvvo8xUFt3KiKIsJHK8F8UL1BeYlLaeudRDZAZ2Ka7Ue0Pg/VrR2vRGUSNaG344QhffKHA9d+iZ8N3BUQltP0tqSTGRSZGXiAUwofn8dwgneOkA+b86MSXLJWFxLnyo6oHzykEWOuC8Ik0f4vHdlBeIXZQtRwt4DEV76IJJH6MmVU7xnWgfGAg1ircKH+wWtCVGTJQPiNbcD5wH5cTVfIahKF/wcbirnrgvsaGDYrQMjJJSoW0yEmAEMjdD4wMEK4/M3wxXllHYchsD/oTSrSc="
+  clusters:
+    - clusterName: "ran2"
+      clusterLabels:
+       #group-vdu: ""
+       #common-49: true
+       #sites: "r740xls"
+      networkType: "OVNKubernetes"
+      clusterNetwork:
+        - cidr: 10.128.0.0/14
+          hostPrefix: 23
+      serviceNetwork:
+        - 172.30.0.0/16
+      machineNetwork:
+        - cidr: 192.168.40.0/25
+      additionalNTPSources:
+        - 192.168.40.10
+      nodes:
+      - hostName: "master01.ran2.samsung.bos2.lab"
+        role: master
+        bmcAddress: "redfish-virtualmedia://192.168.40.164/redfish/v1/Systems/1"
+        bmcCredentialsName:
+          name: "ran2-bmc-creds-secret"
+        bootMACAddress: "B4:7A:F1:C4:21:24"
+        bootMode: "UEFI"
+        cpuset: "0-7"
+        nodeNetwork:
+          interfaces:
+            - name: "ens1f0"
+              macAddress: "b4:96:91:b3:6a:48"
+            - name: "ens1f1"
+              macAddress: "b4:96:91:b3:6a:49"
+            - name: "ens1f2"
+              macAddress: "b4:96:91:b3:6a:4a"
+            - name: "ens1f3"
+              macAddress: "b4:96:91:b3:6a:4b"
+          config:
+            interfaces:
+              - name: ens1f0
+                type: ethernet
+                state: up
+                ipv4:
+                  enabled: true
+                  address:
+                    - ip: 192.168.40.81
+                      prefix-length: 25
+              - name: ens1f1
+                type: ethernet
+                state: down
+              - name: ens1f2
+                type: ethernet
+                state: down
+              - name: ens1f3
+                type: ethernet
+                state: down
+            dns-resolver:
+              config:
+                server:
+                  - 192.168.254.20
+            routes:
+              config:
+                - destination: 0.0.0.0/0
+                  next-hop-address: 192.168.40.1
+                  next-hop-interface: ens1f0
+      - hostName: "master02.ran2.samsung.bos2.lab"
+        role: master
+        bmcAddress: "redfish-virtualmedia://192.168.40.165/redfish/v1/Systems/1"
+        bmcCredentialsName:
+          name: "ran2-bmc-creds-secret"
+        bootMACAddress: "B4:7A:F1:C4:21:62"
+        bootMode: "UEFI"
+        cpuset: "0-7"
+        nodeNetwork:
+          interfaces:
+            - name: "ens1f0"
+              macAddress: "b4:96:91:b3:67:bc"
+            - name: "ens1f1"
+              macAddress: "b4:96:91:b3:67:bd"
+            - name: "ens1f2"
+              macAddress: "b4:96:91:b3:67:be"
+            - name: "ens1f3"
+              macAddress: "b4:96:91:b3:67:bf"     
+          config:
+            interfaces:
+              - name: ens1f0
+                type: ethernet
+                state: up
+                ipv4:
+                  enabled: true
+                  address:
+                    - ip: 192.168.40.82
+                      prefix-length: 25
+              - name: ens1f1
+                type: ethernet
+                state: down
+              - name: ens1f2
+                type: ethernet
+                state: down
+              - name: ens1f3
+                type: ethernet
+                state: down
+            dns-resolver:
+              config:
+                server:
+                  - 192.168.254.20
+            routes:
+              config:
+                - destination: 0.0.0.0/0
+                  next-hop-address: 192.168.40.1
+                  next-hop-interface: ens1f0
