@@ -11,6 +11,8 @@ spec:
   sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDmxZqjFlSoB5gyVvpECdqpfaDTnwA7wEvlFrWJVsY58eSYmJ9sG8vhEIKWx5gG0li964KY/Ced+gaXYOslkQMQ5RkdPE3brp5hCTgqK+tv3l7nA1c6g6em09JdU7eoKh7/8bOLqQJ+2hUEeNrciTLUf0K2sWDG6I+WyV+w2HNMg+QlhYnRCT+HZWJEA2K8nczJMgd6rz5PhBYxkMF8tHKQDcC44O72UtOjoBy2d7qqYYvvo8xUFt3KiKIsJHK8F8UL1BeYlLaeudRDZAZ2Ka7Ue0Pg/VrR2vRGUSNaG344QhffKHA9d+iZ8N3BUQltP0tqSTGRSZGXiAUwofn8dwgneOkA+b86MSXLJWFxLnyo6oHzykEWOuC8Ik0f4vHdlBeIXZQtRwt4DEV76IJJH6MmVU7xnWgfGAg1ircKH+wWtCVGTJQPiNbcD5wH5cTVfIahKF/wcbirnrgvsaGDYrQMjJJSoW0yEmAEMjdD4wMEK4/M3wxXllHYchsD/oTSrSc="
   clusters:
     - clusterName: "ran2"
+      apiVIP: 192.168.40.81
+      ingressVIP: 192.168.40.92
       clusterLabels:
        #group-vdu: ""
        #common-49: true
