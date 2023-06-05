@@ -53,7 +53,7 @@ spec:
                 ipv4:
                   enabled: true
                   address:
-                    - ip: 192.168.40.83
+                    - ip: 192.168.40.81
                       prefix-length: 25
               - name: ens1f0
                 type: ethernet
