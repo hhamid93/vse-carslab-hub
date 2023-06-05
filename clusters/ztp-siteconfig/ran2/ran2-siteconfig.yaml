@@ -12,7 +12,7 @@ spec:
   clusters:
     - clusterName: "ran2"
       apiVIP: 192.168.40.81
-      ingressVIP: 192.168.40.82
+      #ingressVIP: 192.168.40.82
       clusterLabels:
        #group-vdu: ""
        #common-49: true
