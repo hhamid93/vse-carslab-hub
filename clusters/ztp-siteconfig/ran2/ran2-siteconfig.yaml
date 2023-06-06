@@ -27,7 +27,7 @@ spec:
       additionalNTPSources:
         - 192.168.40.10
       nodes:
-      - hostName: "master01.ran2.samsung.bos2.lab"
+      - hostName: "ran2-master.ran2.samsung.bos2.lab"
         role: master
         bmcAddress: "redfish-virtualmedia://192.168.40.164/redfish/v1/Systems/1"
         bmcCredentialsName:
