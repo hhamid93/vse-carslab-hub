@@ -71,7 +71,7 @@ spec:
                 - destination: 0.0.0.0/0
                   next-hop-address: 192.168.40.1
                   next-hop-interface: ens1f1
-      - hostName: "worker01.ran2.samsung.bos2.lab"
+      - hostName: "ran2-worker.ran2.samsung.bos2.lab"
         role: worker
         bmcAddress: "redfish-virtualmedia://192.168.40.165/redfish/v1/Systems/1"
         bmcCredentialsName:
