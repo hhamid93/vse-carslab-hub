@@ -104,7 +104,7 @@ spec:
                 state: down
               - name: ens1f2
                 type: ethernet
-               state: down
+                state: down
               - name: ens1f3
                 type: ethernet
                 state: down
