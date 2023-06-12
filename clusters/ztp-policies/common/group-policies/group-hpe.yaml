@@ -4,12 +4,12 @@ kind: PolicyGenTemplate
 metadata:
   # yamllint disable-line rule:line-length
   # The name will be used to generate the placementBinding and placementRule names as {name}-placementBinding and {name}-placementRule
-  name: "group-vdu"
+  name: "group-hpe"
   namespace: "ztp-group"
 spec:
   bindingRules:
     # These policies will correspond to all clusters with this label:
-    group-vdu: ""
+    group-hpe: ""
   mcp: "master"
   sourceFiles:
     - fileName: ConsoleOperatorDisable.yaml
