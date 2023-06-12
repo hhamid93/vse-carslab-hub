@@ -5,14 +5,14 @@ metadata:
 # yamllint disable-line rule:line-length
   # The name will be used to generate the placementBinding name as {name}-placementBinding, the placementRule name as {name}-placementRule,
   # and the policy name as {name}-{spec.sourceFiles[x].policyName}
-  name: "group-vdu-validator"
+  name: "group-hpe-validator"
   namespace: "ztp-group"
 spec:
   bindingRules:
 # yamllint disable-line rule:line-length
     # This policy will correspond to all clusters with label specified in bindingRules and
     # without label specified in bindingExcludedRules.
-    group-vdu: ""
+    group-hpe: ""
   bindingExcludedRules:
     # yamllint disable-line rule:line-length
     # The ztp-done label is used in coordination with the Topology Aware Lifecycle Operator(TALO).
