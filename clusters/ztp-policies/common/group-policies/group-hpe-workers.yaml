@@ -1,12 +1,12 @@
 apiVersion: ran.openshift.io/v1
 kind: PolicyGenTemplate
 metadata:
-  name: "group-hpe-workers"
+  name: "ran2-hpe-workers"
   namespace: "ztp-group"
 spec:
   bindingRules:
     # These policies will correspond to all clusters with this label:
-    sites: "cnfdf15"
+    sites: "ran2"
   # Set MCP to "worker"
   mcp: "worker"
   sourceFiles:
