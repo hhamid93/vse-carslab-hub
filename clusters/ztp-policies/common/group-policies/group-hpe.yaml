@@ -26,7 +26,6 @@ spec:
       policyName: "config-policy"
       spec:
         cpu:
-          # These must be tailored for the specific hardware platform
           isolated: "4-47,52-63"
           reserved: "0-3,48-51
         hugepages:
