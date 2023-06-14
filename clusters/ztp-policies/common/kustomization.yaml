@@ -11,7 +11,6 @@ generators:
  # yamllint disable-line rule:line-length
  # This group policy is for all Dell EMC XR12 based deployments:
  - group-policies/group-hpe.yaml
- - group-policies/group-hpe-workers.yaml
  # yamllint disable-line rule:line-length
  # This group validator policy is for all Dell EMC XR12 based deployments:
  - group-policies/group-hpe-validator.yaml
