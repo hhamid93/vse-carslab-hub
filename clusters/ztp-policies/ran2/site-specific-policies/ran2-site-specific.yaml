@@ -35,21 +35,21 @@ spec:
           topologyPolicy: single-numa-node
         realTimeKernel:
           enabled: true
-    - fileName: TunedPerformancePatch.yaml
-      policyName: "tuned-perf-patch-policy"
-      spec:
-        profile:
-          - name: performance-patch
-            data: |
-              [main]
-              # yamllint disable-line rule:line-length
-              summary=Configuration changes profile inherited from performance
-              include=openshift-node-performance-openshift-node-performance-profile
-              [bootloader]
-              cmdline_crash=nohz_full=4-47,52-63
-              [sysctl]
-              kernel.timer_migration=1
-              [scheduler]
-              group.ice-ptp=0:f:10:*:ice-ptp.*
-              [service]
-              service.stalld=start,enable
+#    - fileName: TunedPerformancePatch.yaml
+#      policyName: "tuned-perf-patch-policy"
+#      spec:
+#        profile:
+#          - name: performance-patch
+#            data: |
+#              [main]
+#              # yamllint disable-line rule:line-length
+#              summary=Configuration changes profile inherited from performance
+#              include=openshift-node-performance-openshift-node-performance-profile
+#              [bootloader]
+#              cmdline_crash=nohz_full=4-47,52-63
+#              [sysctl]
+#              kernel.timer_migration=1
+#              [scheduler]
+#              group.ice-ptp=0:f:10:*:ice-ptp.*
+#              [service]
+#              service.stalld=start,enable
