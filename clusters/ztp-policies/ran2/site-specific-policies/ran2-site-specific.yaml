@@ -18,7 +18,7 @@ spec:
         additionalKernelArgs:
           - rcupdate.rcu_normal_after_boot=0
           - nohz=off
-          - nohz_full=0-7
+          - nohz_full=4-47,52-63
         cpu:
           isolated: "4-47,52-63"
           reserved: "0-3,48-51"
@@ -46,7 +46,7 @@ spec:
               summary=Configuration changes profile inherited from performance
               include=openshift-node-performance-openshift-node-performance-profile
               [bootloader]
-              cmdline_crash=nohz_full=0-7
+              cmdline_crash=nohz_full=4-47,52-63
               [sysctl]
               kernel.timer_migration=1
               [scheduler]
