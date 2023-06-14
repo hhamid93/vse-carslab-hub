@@ -71,49 +71,49 @@ spec:
                 - destination: 0.0.0.0/0
                   next-hop-address: 192.168.40.1
                   next-hop-interface: ens1f1
-      #- hostName: "ran2-worker.ran2.samsung.bos2.lab"
-      #  role: worker
-      #  bmcAddress: "redfish-virtualmedia://192.168.40.165/redfish/v1/Systems/1"
-      #  bmcCredentialsName:
-      #    name: "ran2-bmc-creds-secret"
-      #  bootMACAddress: "B4:7A:F1:C4:21:62"
-      #  bootMode: "UEFI"
-      #  cpuset: "0-7"
-      #  nodeNetwork:
-      #    interfaces:
-      #      - name: "ens1f0"
-      #        macAddress: "b4:96:91:b3:67:bc"
-      #      - name: "ens1f1"
-      #        macAddress: "b4:96:91:b3:67:bd"
-      #      - name: "ens1f2"
-      #        macAddress: "b4:96:91:b3:67:be"
-      #      - name: "ens1f3"
-      #        macAddress: "b4:96:91:b3:67:bf"     
-      #    config:
-      #      interfaces:
-      #        - name: ens1f1
-      #          type: ethernet
-      #          state: up
-      #          ipv4:
-      #            enabled: true
-      #            address:
-      #              - ip: 192.168.40.82
-      #                prefix-length: 25
-      #        - name: ens1f0
-      #          type: ethernet
-      #          state: down
-      #        - name: ens1f2
-      #          type: ethernet
-      #          state: down
-      #        - name: ens1f3
-      #          type: ethernet
-      #          state: down
-      #      dns-resolver:
-      #        config:
-      #          server:
-      #            - 192.168.254.20
-      #      routes:
-      #        config:
-      #          - destination: 0.0.0.0/0
-      #            next-hop-address: 192.168.40.1
-      #            next-hop-interface: ens1f1
+      - hostName: "ran2-worker.ran2.samsung.bos2.lab"
+        role: worker
+        bmcAddress: "redfish-virtualmedia://192.168.40.165/redfish/v1/Systems/1"
+        bmcCredentialsName:
+          name: "ran2-bmc-creds-secret"
+        bootMACAddress: "B4:7A:F1:C4:21:62"
+        bootMode: "UEFI"
+        cpuset: "0-63"
+        nodeNetwork:
+          interfaces:
+            - name: "ens1f0"
+              macAddress: "b4:96:91:b3:67:bc"
+            - name: "ens1f1"
+              macAddress: "b4:96:91:b3:67:bd"
+            - name: "ens1f2"
+              macAddress: "b4:96:91:b3:67:be"
+            - name: "ens1f3"
+              macAddress: "b4:96:91:b3:67:bf"     
+          config:
+            interfaces:
+              - name: ens1f1
+                type: ethernet
+                state: up
+                ipv4:
+                  enabled: true
+                  address:
+                    - ip: 192.168.40.82
+                      prefix-length: 25
+              - name: ens1f0
+                type: ethernet
+                state: down
+              - name: ens1f2
+                type: ethernet
+                state: down
+              - name: ens1f3
+                type: ethernet
+                state: down
+            dns-resolver:
+              config:
+                server:
+                  - 192.168.254.20
+            routes:
+              config:
+                - destination: 0.0.0.0/0
+                  next-hop-address: 192.168.40.1
+                  next-hop-interface: ens1f1
