@@ -5,3 +5,4 @@ kind: Kustomization
 generators:
  - site-specific-policies/ran2-site-specific.yaml
  - cluster-specific-policies/ran2-cluster-specific.yaml
+ - site-specific-policies/ran2-workers.yaml
