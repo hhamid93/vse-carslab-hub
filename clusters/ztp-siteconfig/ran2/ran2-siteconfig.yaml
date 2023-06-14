@@ -91,15 +91,15 @@ spec:
               macAddress: "b4:96:91:b3:67:bf"     
           config:
             interfaces:
-              - name: ens1f1
-                type: ethernet
-                state: up
-                ipv4:
-                  enabled: true
-                  address:
-                    - ip: 192.168.40.82
-                      prefix-length: 25
-              - name: ens1f0
+             - name: ens1f1
+               type: ethernet
+               state: up
+               ipv4:
+                 enabled: true
+                 address:
+                   - ip: 192.168.40.82
+                     prefix-length: 25
+             - name: ens1f0
                type: ethernet
                state: down
              - name: ens1f2
@@ -108,11 +108,11 @@ spec:
              - name: ens1f3
                type: ethernet
                state: down
-           dns-resolver:
-             config:
-               server:
-                 - 192.168.254.20
-           routes:
+          dns-resolver:
+            config:
+              server:
+                - 192.168.254.20
+          routes:
              config:
                - destination: 0.0.0.0/0
                  next-hop-address: 192.168.40.1
