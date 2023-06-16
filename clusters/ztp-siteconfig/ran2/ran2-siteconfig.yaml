@@ -13,7 +13,7 @@ spec:
     - clusterName: "ran2"
       clusterLabels:
        group-hpe: ""
-       common-49: true
+       common: "true"
        sites: "ran2"
       networkType: "OVNKubernetes"
       baseDomain: "samsung.bos2.lab"
