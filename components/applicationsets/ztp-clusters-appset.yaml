@@ -13,7 +13,7 @@ spec:
   generators:
     - git:
         repoURL: https://github.com/hhamid93/vse-carslab-hub.git
-        revision: main
+        revision: 3014
         directories:
           - path: clusters/ztp-siteconfig/*
   template:
@@ -36,7 +36,7 @@ spec:
       source:
         path: '{{path}}'
         repoURL: https://github.com/hhamid93/vse-carslab-hub.git
-        targetRevision: main
+        targetRevision: 3014
       destination:
         server: https://kubernetes.default.svc
         namespace: clusters-sub
