@@ -30,7 +30,7 @@ spec:
         bmcAddress: "redfish-virtualmedia://192.168.40.164/redfish/v1/Systems/1"
         bmcCredentialsName:
           name: "ran2-bmc-creds-secret"
-        bootMACAddress: "B4:7A:F1:C4:21:24"
+        bootMACAddress: "b4:96:91:b3:6a:48"
         bootMode: "UEFI"
         cpuset: "0-7"
         nodeNetwork:
@@ -76,7 +76,7 @@ spec:
   #      bmcAddress: "redfish-virtualmedia://192.168.40.165/redfish/v1/Systems/1"
   #      bmcCredentialsName:
   #        name: "ran2-bmc-creds-secret"
-  #      bootMACAddress: "B4:7A:F1:C4:21:62"
+  #      bootMACAddress: "b4:96:91:b3:67:bc"
   #      bootMode: "UEFI"
   #      cpuset: "0-63"
   #      nodeNetwork:
