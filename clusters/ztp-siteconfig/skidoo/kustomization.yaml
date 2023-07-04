@@ -1,0 +1,46 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+generators:
+ - skidoo-siteconfig.yaml
+
+resources:
+ - github.com/redhat-partner-solutions/vse-ocp-bases/base/ztp/site-config?ref=main
+
+patches:
+ - target:
+    kind: Secret
+   patch: |-
+     - op: replace
+       path: /metadata/name
+       value: 'skidoo-bmc-creds-secret'
+     - op: replace
+       path: /metadata/namespace
+       value: 'skidoo'
+     - op: replace
+       path: /data/username
+       value: 'cm9vdA=='
+     - op: replace
+       path: /data/password
+       value: 'YWx0aW9zdGFyMTIz'
+ - target:
+    kind: SealedSecret
+   patch: |-
+     - op: replace
+       path: /metadata/name
+       value: 'assisted-deployment-pull-secret'
+     - op: replace
+       path: /metadata/namespace
+       value: 'skidoo'
+     - op: replace
+       path: /spec/encryptedData/.dockerconfigjson
+       value: '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'
+     - op: replace
+       path: /spec/encryptedData/type
+     - op: replace
+       path: /spec/template/metadata/name
+       value: 'skidoo-bmc-creds-secret'
+     - op: replace
+       path: /spec/template/metadata/namespace
+       value: 'skidoo'
