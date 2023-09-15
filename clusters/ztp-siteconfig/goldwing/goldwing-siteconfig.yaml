@@ -8,16 +8,17 @@ spec:
   baseDomain: "cars.lab"
   pullSecretRef:
     name: "assisted-deployment-pull-secret"
-  clusterImageSetNameRef: "img4.12.10-x86-64-appsub"
+  clusterImageSetNameRef: "openshift-4.14.0-rc.0"
 # yamllint disable-line rule:line-length
   sshPublicKey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDd7Jj5iFCWv9IHJK9H+2O3lyPs36moAxeAUiHvzRS3uzqGxxB33BnTRBNDKsoDFSGJX0J4bd5b+XyCPdhFOfvn/xhmAcm6d8GALS+139e8d+No8h2QgZy0OVJFp844k4nmz4wew5/+X9DN40ZURYerekbVc58hw1+rTu0uM2jQ0cE2QmEf3qGKHx9UJW8t6IsMzwnrikBH30sYqn2NcBE+/c8JzlLc3PvvenlY0iQkpukI1A5E9GGMR9OS/q+w6FH85zvSgUatOV7Q5lg45QUF+V77DrfX5+niI+NK1g70pRvD8481SAdXrHPB5vK4vQEmJ4pz83IKYHVuPzRnjzYKv1jV33oReyyMqyk44Rsfkxl4i5SJ9z7q/EVmTjvurzD6ofi3Dg0+PL18eTcjuPFdCxSCUFsnr5N9CRHCxHRQpxoZTD7sYD4jDGNygawLvhxcvgKGBZzP53NRCzRFOMFmZsLPLQRaNOsgKRPAohmrn5l8+1xG5ltVauOwAFlKUxk="
   clusters:
     - clusterName: "goldwing"
       clusterLabels:
+        common-du-prega414: "true"
+        pregaextras: "true"
         group-supermicro: ""
-        #common-49: true
-        #sites: "smcx12"
       networkType: "OVNKubernetes"
+      cpuPartitioningMode: AllNodes
       clusterNetwork:
         - cidr: 10.128.0.0/14
           hostPrefix: 23
@@ -41,31 +42,17 @@ spec:
             name: "goldwing-bmc-creds-secret"
           bootMACAddress: "b4:96:91:ab:21:98"
           bootMode: "UEFI"
-          cpuset: "0-1,32-33"
+          #cpuset: "0-1,32-33"
           nodeNetwork:
             interfaces:
-              - name: eno1
-                macAddress: "3c:ec:ef:30:71:c4"
-              - name: eno2
-                macAddress: "3c:ec:ef:30:71:c5"
               - name: eno3
                 macAddress: "3c:ec:ef:2d:80:1a"
-              - name: eno4
-                macAddress: "3c:ec:ef:2d:80:1b"
-              - name: enp25s0f0
-                macAddress: "3c:ec:ef:2d:80:18"
-              - name: enp25s0f1
-                macAddress: "3c:ec:ef:2d:80:19"
-              - name: enp138s0f0
+              - name: ens6f0
+                macAddress: "50:7c:6f:01:6b:14"
+              - name: ens4f0
                 macAddress: "b4:96:91:ab:21:98"
             config:
               interfaces:
-                - name: eno1
-                  type: ethernet
-                  state: down
-                - name: eno2
-                  type: ethernet
-                  state: down
                 - name: eno3
                   type: ethernet
                   state: up
@@ -81,12 +68,12 @@ spec:
                         prefix-length: 64
                     autoconf: false
                     dhcp: false
-                - name: enp138s0f0
+                - name: ens6f0
                   type: ethernet
                   state: up
-                - name: eno4
+                - name: ens4f0
                   type: ethernet
-                  state: down
+                  state: up
               dns-resolver:
                 config:
                   search:
