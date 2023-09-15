@@ -4,10 +4,13 @@ kind: Kustomization
 
 resources:
  - ns.yaml
+ - common-policies/common-prega414extras.yaml
 
 generators:
  # This is common to all RAN deployments
  - common-policies/common-ranGen.yaml
+ - common-policies/common-prega414.yaml
+ 
  # yamllint disable-line rule:line-length
  # This is common to all RAN DU deployments for vRAN Solution Enablement's Synchronization Workgroup
  - common-policies/common-ranGen-vsesync.yaml
