@@ -13,7 +13,7 @@ spec:
   generators:
     - git:
 # yamllint disable-line rule:line-length
-        repoURL: https://github.com/redhat-partner-solutions/vse-carslab-hub.git
+        repoURL: https://github.com/hhamid93/vse-carslab-hub.git
         revision: prega-jimmy
         directories:
           - path: clusters/ztp-policies/*
@@ -37,7 +37,7 @@ spec:
       source:
         path: '{{path}}'
 # yamllint disable-line rule:line-length
-        repoURL: https://github.com/redhat-partner-solutions/vse-carslab-hub.git
+        repoURL: https://github.com/hhamid93/vse-carslab-hub.git
         targetRevision: prega-jimmy
       destination:
         server: https://kubernetes.default.svc
