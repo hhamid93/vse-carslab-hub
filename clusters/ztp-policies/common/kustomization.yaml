@@ -25,8 +25,8 @@ generators:
  #- group-policies/group-dellr740-vse1-validator.yaml
  # yamllint disable-line rule:line-length
  # This group validator policy is for some Supermicro X11 based deployments:
- - group-policies/group-vdu.yaml
- - group-policies/group-vdu-validator.yaml
+ #- group-policies/group-vdu.yaml
+ #- group-policies/group-vdu-validator.yaml
 
  # yamllint disable-line rule:line-length
 
