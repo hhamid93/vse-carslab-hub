@@ -10,7 +10,6 @@ generators:
  # This is common to all RAN deployments
  - common-policies/common-ranGen.yaml
  - common-policies/common-prega414.yaml
- - common-policies/common-prega414extras.yaml
  
  # yamllint disable-line rule:line-length
  # This is common to all RAN DU deployments for vRAN Solution Enablement's Synchronization Workgroup
