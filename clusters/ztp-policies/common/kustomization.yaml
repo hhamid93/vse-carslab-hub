@@ -4,7 +4,7 @@ kind: Kustomization
 
 resources:
  - ns.yaml
- 
+ - common-policies/common-prega414extras.yaml
 
 generators:
  # This is common to all RAN deployments
