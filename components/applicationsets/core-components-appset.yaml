@@ -8,7 +8,7 @@ spec:
   generators:
     - git:
         repoURL: https://github.com/hhamid93/vse-carslab-hub
-        revision: main
+        revision: prega-jimmy
         directories:
           - path: core/*
   template:
@@ -28,7 +28,7 @@ spec:
             maxDuration: 5m
       source:
         repoURL: https://github.com/hhamid93/vse-carslab-hub
-        targetRevision: main
+        targetRevision: prega-jimmy
         path: '{{path}}'
       destination:
         server: https://kubernetes.default.svc
