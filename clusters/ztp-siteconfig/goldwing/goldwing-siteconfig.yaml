@@ -50,7 +50,7 @@ spec:
               - name: ens6f0
                 macAddress: "50:7c:6f:01:6b:14"
               - name: ens4f0
-              #  macAddress: "b4:96:91:ab:21:98"
+                macAddress: "b4:96:91:ab:21:98"
               #- name: enp0s20f0u7u2c2
               #  macAddress: "26:57:8f:6a:6e:12"
             config:
