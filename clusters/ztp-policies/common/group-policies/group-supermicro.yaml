@@ -24,7 +24,6 @@ spec:
       policyName: "config-policy"
     - fileName: PerformanceProfile.yaml
       policyName: "config-policy"
-      complianceType: musthave
       spec:
         additionalKernelArgs:
           - crashkernel=512M
@@ -47,7 +46,6 @@ spec:
         #  userLevelNetworking: true #testing 30-Jan dcain
     - fileName: TunedPerformancePatch.yaml
       policyName: "config-policy"
-      complianceType: musthave
       spec:
         profile:
           - name: performance-patch
