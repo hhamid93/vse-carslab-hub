@@ -10,7 +10,7 @@ spec:
   bindingRules:
     # These policies will correspond to all clusters with this label:
     group-supermicro: ""
-  mcp: "master"
+  #mcp: "master"
   sourceFiles:
     - fileName: ConsoleOperatorDisable.yaml
       policyName: "config-policy"
