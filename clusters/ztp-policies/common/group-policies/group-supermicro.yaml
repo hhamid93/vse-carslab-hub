@@ -61,3 +61,7 @@ spec:
               [service]
               service.stalld=start,enable
               service.chronyd=stop,disable
+    - fileName: optional-extra-manifest/enable-crun-master.yaml
+      policyName: "config-policy"
+    - fileName: optional-extra-manifest/enable-crun-worker.yaml
+      policyName: "config-policy"
