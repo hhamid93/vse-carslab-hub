@@ -1,0 +1,7 @@
+---
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+generators:
+ - site-specific-policies/ran1-site-specific.yaml
+ - cluster-specific-policies/ran1-cluster-specific.yaml
