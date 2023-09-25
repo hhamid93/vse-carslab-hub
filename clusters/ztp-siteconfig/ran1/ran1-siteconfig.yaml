@@ -16,9 +16,8 @@ spec:
     ingressVIP: 192.168.40.90
     baseDomain: "samsung.bos2.lab"
     clusterLabels:
-     #group-vdu: ""
-     #common-49: true
-     #sites: "r740xls"
+       group-hpe: ""
+       common: "true"
     networkType: "OVNKubernetes"
     clusterNetwork:
       - cidr: 10.128.0.0/14
