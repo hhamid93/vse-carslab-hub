@@ -84,6 +84,6 @@ spec:
       cpuArchitecture: x86_64
       version: "414.92.202308311551-0"
       # yamllint disable rule:line-length
-      url: https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/pre-release/latest-4.14/rhcos-4.14.0-rc.0-x86_64-live.x86_64.iso
-      rootFSUrl: https://mirror.openshift.com/pub/openshift-v4/x86_64/dependencies/rhcos/pre-release/latest-4.14/rhcos-4.14.0-rc.0-x86_64-live-rootfs.x86_64.img
+      url: https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.14/4.14.0/rhcos-4.14.0-x86_64-live.x86_64.iso
+      rootFSUrl: https://mirror.openshift.com/pub/openshift-v4/dependencies/rhcos/4.14/4.14.0/rhcos-4.14.0-x86_64-live-rootfs.x86_64.img
       # yamllint enable rule:line-length
