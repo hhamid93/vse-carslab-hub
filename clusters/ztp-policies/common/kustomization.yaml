@@ -8,7 +8,7 @@ resources:
 
 generators:
  # This is common to all RAN deployments
- #- common-policies/common-ranGen.yaml
+ - common-policies/common-ranGen.yaml
  - common-policies/common-prega414.yaml
  
  # yamllint disable-line rule:line-length
