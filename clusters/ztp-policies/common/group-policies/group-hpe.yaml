@@ -12,14 +12,14 @@ spec:
     group-hpe: ""
   mcp: "master"
   sourceFiles:
-    - fileName: ConsoleOperatorDisable.yaml
-      policyName: "config-policy"
-    - fileName: StorageClass.yaml
-      policyName: "config-policy"
-      metadata:
-        name: "lso-filesystemclass"
-        annotations:
-          storageclass.kubernetes.io/is-default-class: "true"
+    #- fileName: ConsoleOperatorDisable.yaml
+    #  policyName: "config-policy"
+    #- fileName: StorageClass.yaml
+    #  policyName: "config-policy"
+    #  metadata:
+    #    name: "lso-filesystemclass"
+    #    annotations:
+    #      storageclass.kubernetes.io/is-default-class: "true"
     - fileName: DisableSnoNetworkDiag.yaml
       policyName: "config-policy"
     - fileName: PerformanceProfile.yaml
