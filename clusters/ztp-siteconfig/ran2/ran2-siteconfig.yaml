@@ -76,15 +76,15 @@ spec:
 #        bmcAddress: "redfish-virtualmedia://192.168.40.165/redfish/v1/Systems/1"
 #        bmcCredentialsName:
 #          name: "ran2-bmc-creds-secret"
-#        bootMACAddress: "b4:96:91:b3:67:bd"
+#        bootMACAddress: "b4:96:91:b3:67:bc"
 #        bootMode: "UEFI"
 #        cpuset: "0-63"
 #        nodeNetwork:
 #          interfaces:
 #            - name: "ens1f0"
-#              macAddress: "b4:96:91:b3:67:bd"
-#            - name: "ens1f1"
 #              macAddress: "b4:96:91:b3:67:bc"
+#            - name: "ens1f1"
+#              macAddress: "b4:96:91:b3:67:bd"
 #            - name: "ens1f2"
 #              macAddress: "b4:96:91:b3:67:be"
 #            - name: "ens1f3"
