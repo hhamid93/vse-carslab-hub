@@ -30,7 +30,7 @@ spec:
         bmcAddress: "redfish-virtualmedia://192.168.40.164/redfish/v1/Systems/1"
         bmcCredentialsName:
           name: "ran2-bmc-creds-secret"
-        bootMACAddress: "b4:96:91:b3:6a:48"
+        bootMACAddress: "b4:96:91:b3:6a:49"
         bootMode: "UEFI"
         cpuset: "0-7"
         nodeNetwork:
@@ -76,7 +76,7 @@ spec:
         bmcAddress: "redfish-virtualmedia://192.168.40.165/redfish/v1/Systems/1"
         bmcCredentialsName:
           name: "ran2-bmc-creds-secret"
-        bootMACAddress: "b4:96:91:b3:67:bc"
+        bootMACAddress: "b4:96:91:b3:67:bd"
         bootMode: "UEFI"
         cpuset: "0-63"
         nodeNetwork:
@@ -101,7 +101,7 @@ spec:
                      prefix-length: 25
              - name: ens1f0
                type: ethernet
-               state: up
+               state: down
              - name: ens1f2
                type: ethernet
                state: down
