@@ -76,7 +76,7 @@ spec:
         bmcAddress: "redfish-virtualmedia://192.168.40.165/redfish/v1/Systems/1"
         bmcCredentialsName:
           name: "ran2-bmc-creds-secret"
-        bootMACAddress: "b4:96:91:b3:67:bd"
+        bootMACAddress: "b4:96:91:b3:67:be"
         bootMode: "UEFI"
         cpuset: "0-63"
         nodeNetwork:
@@ -91,7 +91,7 @@ spec:
               macAddress: "b4:96:91:b3:67:bf"     
           config:
             interfaces:
-             - name: ens1f1
+             - name: ens1f3
                type: ethernet
                state: up
                ipv4:
@@ -102,10 +102,10 @@ spec:
              - name: ens1f0
                type: ethernet
                state: down
-             - name: ens1f2
+             - name: ens1f1
                type: ethernet
                state: down
-             - name: ens1f3
+             - name: ens1f2
                type: ethernet
                state: down
           dns-resolver:
@@ -116,4 +116,4 @@ spec:
              config:
                - destination: 0.0.0.0/0
                  next-hop-address: 192.168.40.1
-                 next-hop-interface: ens1f1
+                 next-hop-interface: ens1f3
