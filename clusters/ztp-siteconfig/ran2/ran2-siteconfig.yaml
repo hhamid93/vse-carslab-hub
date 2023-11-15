@@ -101,7 +101,7 @@ spec:
                      prefix-length: 25
              - name: ens1f0
                type: ethernet
-               state: down
+               state: up
              - name: ens1f2
                type: ethernet
                state: down
